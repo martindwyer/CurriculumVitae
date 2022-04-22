@@ -301,6 +301,25 @@ Navbar
   display: none;
 }
 
+#back-to-top {
+  position: absolute;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+}
+
+#back-to-top button {
+  border: none;
+  background: rgba(0, 0, 0, 0);
+}
+
+#back-to-top svg {
+  font-size: 3rem;
+  color: var(--clr-primary-mid);
+
+}
+
 @media screen and (min-width: 768px) {
   .toggle-btn {
     display: none;
@@ -606,7 +625,7 @@ Services
 ===============
 */
 .service {
-  background: var(--clr-white);
+  background: #fff6e9;
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: var(--radius);
@@ -695,14 +714,13 @@ Jobs
 .job-btn {
   background: transparent;
   border-color: transparent;
-  text-transform: capitalize;
-  font-size: 1.25rem;
+  font-size: 1rem;
   letter-spacing: var(--spacing);
   margin: 0.5rem;
   transition: var(--transition);
   cursor: pointer;
   padding: 0.25rem 0;
-  line-height: 1;
+  line-height: 1.5rem;
 }
 
 .job-btn:hover {
@@ -720,7 +738,12 @@ Jobs
 }
 
 .job-info h3 {
-  font-weight: 400;
+  font-weight: 600;
+}
+
+.certifications .job-info h3 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 .job-info h4 {
@@ -818,7 +841,7 @@ Projects
 }
 
 .project-info {
-  background: var(--clr-white);
+  background: #ffffff;
   padding: 1rem 1rem;
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);

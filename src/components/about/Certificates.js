@@ -1,17 +1,20 @@
 import React from "react"
 import Title from "../layout/Title"
 import { FaAngleDoubleRight } from "react-icons/fa"
-import certificates from "../../constants/certificates"
+import certificates from "../../constants/certificates-v2"
 
 const Certificates = () => {
   const [certIndex, setCertIndex] = React.useState(0)
 
-  const { awardedBy, certs } = certificates[certIndex]
+  const { forHeading, certs } = certificates[certIndex]
 
   console.log("certs", certificates)
 
   return (
-    <section className="section jobs" style={{ paddingTop: "0rem" }}>
+    <section
+      className="section jobs certifications"
+      style={{ paddingTop: "0rem" }}
+    >
       <Title title="Certifications" />
       <div className="jobs-center">
         <div className="btn-container">
@@ -24,20 +27,22 @@ const Certificates = () => {
                 }
                 onClick={() => setCertIndex(index)}
               >
-                {item.shortName}
+                {item.awardedFor}
               </button>
             )
           })}
         </div>
         <article className="job-info">
-          <h3>{awardedBy}</h3>
+          <h3>{forHeading}</h3>
 
           {certs.map((item, index) => {
             return (
               <div key={index} className="job-desc">
                 <FaAngleDoubleRight className="job-icon" />
                 <p>
-                  {item.name},&nbsp;{item.dateString} (
+                  {item.name},&nbsp;by&nbsp;
+                  <a href={item.providerUrl}>{item.awardedBy}</a>&nbsp;in&nbsp;
+                  {item.dateString} (
                   <a href={item.url} target="_blank" rel="noreferrer">
                     view
                   </a>

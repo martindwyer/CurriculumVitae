@@ -3,10 +3,15 @@ import logo from "../../assets/images/logo.png"
 import { FaAlignRight } from "react-icons/fa"
 import pageLinks from "../../constants/links"
 import { Link } from "gatsby"
+import { FaArrowCircleUp } from "react-icons/fa"
 
 const Navbar = ({ toggleSidebar }) => {
+  const backToTop = () => {
+    window.scrollTo(0, 0)
+  }
+
   return (
-    <nav className="navbar">
+    <nav id="navbar" className="navbar">
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
@@ -25,6 +30,11 @@ const Navbar = ({ toggleSidebar }) => {
             )
           })}
         </div>
+      </div>
+      <div id="back-to-top">
+        <button onClick={() => backToTop()}>
+          <FaArrowCircleUp />
+        </button>
       </div>
     </nav>
   )

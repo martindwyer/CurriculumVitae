@@ -2,33 +2,21 @@ const education = [
   {
     id: 1,
     school: "Walden University",
-    shortName: "Walden",
+    shortName: "Walden University",
     degree: "M.S. Information Technology",
     description: [
-      "Concentration in software engineering.",
-      "Intensive training on software development.",
-      "Extensive training in networking and database technologies.",
+      "Broad education in network, database, and enterprise management",
+      "Software engineering concentration including software planning, development, testing and maintenance.",
+      "Managing software development in traditional and agile life cycles.",
+      "Extensive training on software development with Java.",
     ],
     dateString: "May 2020",
-  },
-  {
-    id: 2,
-    school: "Kirkwood Community College",
-    shortName: "Kirkwood",
-    degree: "Web Development Certificate",
-    description: [
-      "Extensive training with the LAMP stack (Linux, Apache, MySQL, PHP).",
-      "Training in front end technologies including HTML, CSS, JavaScript, Bootstrap, and Foundation",
-      "Completed 24 hours academic coursework in HTML, CSS, and JavaScript.",
-      "Trained in web design principles, prototyping and more.",
-    ],
-    dateString: "May 2018",
   },
 
   {
     id: 2,
     school: "Illinois State University",
-    shortName: "IL State",
+    shortName: "Illinois State University",
     degree: "M.S. Economics",
     description: [
       "Concentration in quantitative methods, statistics, econometrics.",
@@ -40,13 +28,26 @@ const education = [
   {
     id: 2,
     school: "Millikin University",
-    shortName: "Millikin",
+    shortName: "Millikin University",
     degree: "B.S. Business",
     description: [
       "Broad foundation in business education including management, accounting, marketing and finance.",
       "Major areas of study included computer programming, statistics, finance and economics.",
     ],
     dateString: "May 1984",
+  },
+  {
+    id: 2,
+    school: "Kirkwood Community College",
+    shortName: "Kirkwood Community College",
+    degree: "Web Development Certificate",
+    description: [
+      "Extensive training with the LAMP stack (Linux, Apache, MySQL, PHP).",
+      "Training in front end technologies including HTML, CSS, JavaScript, Bootstrap, and Foundation",
+      "Completed 24 hours academic coursework in HTML, CSS, and JavaScript.",
+      "Trained in web design principles, prototyping and more.",
+    ],
+    dateString: "May 2018",
   },
 ]
 
