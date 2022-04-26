@@ -7,7 +7,7 @@ const Error = () => {
     <>
       <Seo title="Not Found" />
 
-      <main className="error-page">
+      <main className="error-page bg-gradient">
         <div className="error-container">
           <h1>oops it's a dead end</h1>
           <Link to="/" className="btn">

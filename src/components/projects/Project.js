@@ -1,35 +1,58 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
-import { useStaticQuery, graphql } from "gatsby"
+import parse from "html-react-parser"
+import TechStackModal from "./TechStackModal"
 
-const Project = ({ project }) => {
-  const { allImageSharp } = useStaticQuery(graphql`
-    {
-      allImageSharp {
-        nodes {
-          gatsbyImageData(width: 600)
-          parent {
-            ... on File {
-              name
-            }
-          }
-        }
-      }
-    }
-  `)
-  const image = allImageSharp.nodes.find(
-    node => node.parent.name === project.imageFile
-  )
-  let projectGatsbyImageData
-  if (image) {
-    projectGatsbyImageData = image.gatsbyImageData
-    console.log(projectGatsbyImageData)
-  }
+const Project = props => {
+  const { title, description, image, siteUrl } = props.site
 
   return (
-    <article className="project">
-      <GatsbyImage
+    <>
+      <div className="row">
+        <div className="col-lg-7" portfolio-image>
+          <a href={siteUrl} target="_blank" rel="noreferrer" className="">
+            <img
+              className="d-block w-100 animate__animated animate__zoomInDown"
+              src={image}
+              alt="First slide"
+            />
+          </a>
+        </div>
+        <div className="col-lg-5 portfolio-comments">
+          <div>
+            <div className="accordion" id="accordion">
+              <div className="card  mb-3 shadow">
+                <div className="card-header" id="headingOne">
+                  <h5 className="mb-0">
+                    <button
+                      className="btn btn-link appTitle"
+                      data-toggle=""
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                      disabled
+                      style={{ fontSize: "1.25rem", fontWeight: 800 }}
+                    >
+                      {title}
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  className="show"
+                  aria-labelledby="headingOne"
+                  data-parent=""
+                >
+                  <div className="card-body">{parse(description)}</div>
+
+                  <TechStackModal props={props} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <GatsbyImage
         image={projectGatsbyImageData}
         className="project-img"
         alt={project.name}
@@ -57,8 +80,8 @@ const Project = ({ project }) => {
             <FaGithubSquare className="project-icon" />
           </a>
         </div>
-      </div>
-    </article>
+      </div> */}
+    </>
   )
 }
 

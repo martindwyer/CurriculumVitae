@@ -4,11 +4,19 @@ import Jobs from "../components/about/Jobs"
 import Projects from "../components/projects/Projects"
 import AboutMe from "../components/about/AboutMe"
 import Education from "../components/about/Education"
-import projects from "../constants/projects"
+import projects from "../components/projects/portfolio"
 import Certificates from "../components/about/Certificates"
 
 const About = () => {
-  const featuredProjects = projects.filter(project => project.featured === true)
+  console.log(projects)
+  const featuredWebsites = projects.websites.filter(
+    project => project.featured === true
+  )
+  const featuredWebApps = projects.webApps.filter(
+    project => project.featured === true
+  )
+  const featuredProjects = featuredWebsites.concat(featuredWebApps)
+
   return (
     <>
       <Seo title="About" />

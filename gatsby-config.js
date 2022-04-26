@@ -8,9 +8,10 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Portfolio",
-    description: "A detailed individual portfolio",
+    description:
+      "A curriculum vitae for Martin Dwyer, Founder and CEO of MD Web Technologies",
     titleTemplate: `%s | Portfolio`,
-    url: `https://mdbytes-portfolio.netlify.app`,
+    url: `https://mdbytes.us`,
     twitterUsername: `@mdbytes`,
     image: `/main-image.png`,
   },

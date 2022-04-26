@@ -343,6 +343,7 @@ Navbar
   .nav-links a:hover {
     color: var(--clr-primary-5);
     box-shadow: 0px 2px var(--clr-primary-5);
+    text-decoration: none;
   }
 
   .nav-center {
@@ -1004,7 +1005,6 @@ Pages
 .error-page {
   display: grid;
   place-items: center;
-  background: var(--clr-primary-10);
   text-align: center;
 }
 

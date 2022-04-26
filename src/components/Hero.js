@@ -39,14 +39,11 @@ const Hero = () => {
             </div>
           </div>
         </article>
-        {/* <StaticImage
-          src="../assets/images/hero.svg"
+        <img
+          src={heroImg}
           alt="portfolio"
-          className="hero-img"
-          placeholder="blurred"
-        /> */}
-
-        <img src={heroImg} alt="portfolio" className="hero-img-svg" />
+          className="hero-img-svg animate__animated animate__fadeIn"
+        />
       </section>
     </header>
   )
