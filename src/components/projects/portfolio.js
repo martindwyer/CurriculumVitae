@@ -2,7 +2,6 @@ import primalPic from "../../assets/images/portfolio/primal-strength.jpeg"
 import penguinPic from "../../assets/images/portfolio/penguin-tours.jpeg"
 import wildThingsPic from "../../assets/images/portfolio/wild-things.jpeg"
 import mirefaPicture from "../../assets/images/portfolio/mirefa.jpeg"
-import vidlyImage from "../../assets/images/portfolio/vidly-video.jpeg"
 import feedbackFocusImage from "../../assets/images/portfolio/feedback-focus.jpeg"
 import careersImage from "../../assets/images/portfolio/careers.jpeg"
 import expensifyImage from "../../assets/images/portfolio/expensify.jpeg"
@@ -100,23 +99,22 @@ const portfolio = {
   ],
   webApps: [
     {
-      title: "Vidly Video",
+      title: "Careers",
       description:
-        "Vidly Video represents a customer interface for video streaming rental operations. The application allows the user to register, search for movies, and secure movies for rental. User registration can be at three different authorization levels; administrators, employees, and customers.",
+        "An employment application module that could be integrated into any enterprise internet or intranet framework. Input is validated. When necessary, the applicant is guided to correct inputs that cannot be accepted.",
       techDetails: {
-        backEnd: "ASP.NET MVC, Entity Framework, MySQL",
-        frontEnd: "HTML, CSS, JavaScript, jQuery",
-        specialFeatures:
-          "User registration and validation.  Form input validations with data annotations and jQuery validate.",
-        deployment: "Microsoft IIS Server, AWS Elastic Beanstalk",
+        backEnd: "Linux server with Nginx support",
+        frontEnd: "HTML, CSS, Bootstrap, JavaScript, jQuery, jQuery UI.",
+        specialFeatures: "Input validation using jQuery validate.",
+        deployment: "DigitalOcean virtual private server",
         performance: "",
         analytics: "",
         metaData: "",
-        gitUrl: "https://github.com/martindwyer/VidlyVideoForVS2019",
+        gitUrl: "https://github.com/martindwyer/EmploymentApplication",
       },
-      varName: "vidly",
-      image: vidlyImage,
-      siteUrl: "http://vidly001-dev.us-east-2.elasticbeanstalk.com/",
+      varName: "careers",
+      image: careersImage,
+      siteUrl: "https://careers.mdbytes.us/",
       featured: true,
     },
     {
@@ -137,7 +135,7 @@ const portfolio = {
       varName: "feedbackFocus",
       image: feedbackFocusImage,
       siteUrl: "https://customer-email-response-app.herokuapp.com/",
-      featured: true,
+      featured: false,
     },
     {
       title: "Expensify",
@@ -157,25 +155,6 @@ const portfolio = {
       varName: "expensifyApp",
       image: expensifyImage,
       siteUrl: "https://mdbytes-expensify-app.herokuapp.com/",
-      featured: false,
-    },
-    {
-      title: "Careers",
-      description:
-        "An employment application module that could be integrated into any enterprise internet or intranet framework. Input is validated. When necessary, the applicant is guided to correct inputs that cannot be accepted.",
-      techDetails: {
-        backEnd: "Linux server with Nginx support",
-        frontEnd: "HTML, CSS, Bootstrap, JavaScript, jQuery, jQuery UI.",
-        specialFeatures: "Input validation using jQuery validate.",
-        deployment: "DigitalOcean virtual private server",
-        performance: "",
-        analytics: "",
-        metaData: "",
-        gitUrl: "https://github.com/martindwyer/EmploymentApplication",
-      },
-      varName: "careers",
-      image: careersImage,
-      siteUrl: "https://careers.mdbytes.us/",
       featured: false,
     },
 
