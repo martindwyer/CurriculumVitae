@@ -33,5 +33,14 @@ module.exports = {
         icon: "src/assets/images/favicon_io/android-chrome-256x256.png",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-W905VBE0HS"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
 }
